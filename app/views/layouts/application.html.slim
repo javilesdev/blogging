@@ -2,7 +2,8 @@ doctype html
 html
   head
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
-    title Blog
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    title  = page_title || "Codigo con TDA"
     = csrf_meta_tags
     link href="https://fonts.googleapis.com/css?family=Arimo|Muli:900" rel="stylesheet" /
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
