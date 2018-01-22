@@ -15,7 +15,7 @@
 development:
   adapter:  postgresql
   host:     localhost
-  encoding: unicode
+  encoding: utf-8
   database: blog_development
   pool:     5
   username: admin
@@ -43,7 +43,7 @@ development:
 test:
   adapter:  postgresql
   host:     localhost
-  encoding: unicode
+  encoding: utf-8
   database: blog_test
   pool:     5
   username: admin
@@ -53,7 +53,7 @@ test:
 production:
   adapter:  postgresql
   host:     localhost
-  encoding: unicode
+  encoding: utf-8
   database: blog_production
   pool:     5
   username: admin
