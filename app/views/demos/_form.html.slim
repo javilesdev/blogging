@@ -1,0 +1,12 @@
+= form_for @demo do |f|
+  - if @demo.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@demo.errors.count, "error")} prohibited this demo from being saved:"
+      ul
+        - @demo.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :text
+    = f.text_field :text
+  .actions = f.submit

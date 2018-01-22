@@ -1,0 +1,19 @@
+= title_content('Entradas', new_admin_post_path(), 'Añadir nueva')
+.card
+  table
+    thead
+      tr
+        th
+        th
+        th
+
+    tbody
+      - @posts.each do |post|
+        tr
+          td = link_to 'Show', post
+          td = link_to 'Edit', edit_post_path(post)
+          td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+
+  br
+
+  = link_to 'New Post', new_post_path

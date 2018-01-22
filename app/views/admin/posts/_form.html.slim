@@ -1,0 +1,14 @@
+= form_for @post do |f|
+  .row
+    .col-md-4.order-md-2.mb-4
+      .card
+        button.btn.btn-primary.mb-2 type="submit"  Publicar
+    .col-md-8.order-md-1
+      .card
+        .form-group
+          = f.text_field :title, class: "form-control form-control-lg", placeholder: "Introduce el Título aquí"
+        .form-group
+          = f.text_area :body, class: "tinymce"
+          = tinymce
+
+

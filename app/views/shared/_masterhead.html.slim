@@ -1,0 +1,10 @@
+header.masthead(
+    style="background-image: url('#{image_path('board.jpg')}')"
+)
+  .overlay
+  .container
+    .row
+      .col-lg-8.col-md-10.mx-auto
+        .site-heading
+          h1 = post.title || "Clean Blog"
+          span.subheading A Blog Theme by Start Bootstrap

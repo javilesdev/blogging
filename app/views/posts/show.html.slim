@@ -1,0 +1,6 @@
+= render partial: 'shared/masterhead', locals: {post: @post}
+article
+  .container
+    .row
+      .col-lg-8.col-md-10.mx-auto
+        = (@post.body).html_safe

@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    title Blog
+    = csrf_meta_tags
+    link href="https://fonts.googleapis.com/css?family=Arimo|Muli:900" rel="stylesheet" /
+    = stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = tinymce_assets
+  body
+    = render 'shared/admin/navbar'
+    .container-fluid
+      .row
+        = render 'shared/admin/sidebar'
+        main.col-md-9.ml-sm-auto.col-lg-10.pt-3.px-4
+          = yield

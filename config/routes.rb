@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :admin do
+    resources :posts
+  end
+  resources :demos
+  scope module: 'admin', path: 'admin' do
+    resources :posts
+  end
+  get "/:slug" => "posts#show"
 end

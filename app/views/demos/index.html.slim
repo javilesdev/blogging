@@ -1,0 +1,21 @@
+h1 Listing demos
+
+table
+  thead
+    tr
+      th Text
+      th
+      th
+      th
+
+  tbody
+    - @demos.each do |demo|
+      tr
+        td = demo.text
+        td = link_to 'Show', demo
+        td = link_to 'Edit', edit_demo_path(demo)
+        td = link_to 'Destroy', demo, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Demo', new_demo_path

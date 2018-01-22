@@ -54,8 +54,15 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jquery-rails'
-gem 'pg'
+gem 'pg', '~> 0.18.4'
 gem 'slim-rails'
+
+# Custom
+
+gem 'bootstrap', '~> 4.0.0'
+gem "font-awesome-rails"
+gem "flutie"
+gem 'tinymce-rails'
 
 group :development do
   gem 'better_errors'
@@ -86,3 +93,6 @@ group :test do
   gem 'launchy'
 end
 
+group :production do
+  gem "rack-timeout"
+end
